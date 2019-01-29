@@ -2,7 +2,7 @@ FROM python:3.6-alpine
 
 MAINTAINER Lukas Schmid
 
-COPY ["data/pip.conf", "/root/.pip/pip.conf"]
+COPY pip.conf /root/.pip/pip.conf
 
 RUN apk add gcc g++
 
