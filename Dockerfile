@@ -10,7 +10,7 @@ RUN set -x \
     && zypper -n in python3-pip \
     && zypper clean -a
 
-COPY pip.conf /root/.pip/pip.conf
+COPY ["data/pip.conf", "/root/.pip/pip.conf"]
 
 RUN pip install --upgrade \
     pip \
