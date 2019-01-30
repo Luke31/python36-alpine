@@ -1,1 +1,8 @@
 .python-version
+
+# PyCharm
+.idea/
+.project
+.pyproject
+.settings
+
