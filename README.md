@@ -16,7 +16,7 @@ docker build -t python36-alpine .
 
 Now you can use this image as a base-image for python-applications like:
 
-```docker
+```dockerfile
 FROM python36-alpine
 
 RUN source activate /env && pip install -r requirements.txt
