@@ -1,5 +1,5 @@
 # python36-alpine
-Python docker base-image with ability to change repository urls like pip index-url or conda channel_alias
+Python docker base-image with ability to change repository urls like pip index-url or conda channel_alias. Will also create a conda-environment under `/env`
 
 ## How to use
 
@@ -14,8 +14,11 @@ cd python36-alpine &&
 docker build -t python36-alpine .
 ```
 
-Now you can use this image as a base-image for python-applications:
+Now you can use this image as a base-image for python-applications like:
 
 ```docker
 FROM python36-alpine
+
+RUN source activate /env && pip install -r requirements.txt
+RUN python yourscript.py
 ```
